@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <td colspan="7">
+          <input type="text" id="teamID1" class="form-control" placeholder="Team1">
+        </td>
+        <td colspan="7">
+          <label for="color1">Colour of Team 1:</label>
+          <input type="color" id="color1" value="#0000ff">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="7">
+          <input type="text" id="teamID2" class="form-control" placeholder="Team2">
+        </td>
+        <td colspan="7">
+          <label for="color2">Colour of Team 2:</label>
+          <input type="color" id="color2" value="#0000ff">
+        </td>
+      </tr>
+      <tr style="text-align:center">
+        <td colspan="14">
+          <button type="button" class="btn btn-primary btn-sm" onclick="readInfo()">submit</button>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut1" onclick="displayData(1)">Display</button></td>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut2" onclick="displayData(2)">Display</button></td>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut3" onclick="displayData(3)">Display</button></td>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut4" onclick="displayData(4)">Display</button></td>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut5" onclick="displayData(5)">Display</button></td>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut6" onclick="displayData(6)">Display</button></td>
+        <td colspan="2"><button type="button" class="btn btn-primary btn-sm" id="disBut7" onclick="displayData(7)">Display</button></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <select class="form-select" id="selTeams1">
+            <option value="1">team</option>
+          </select>
+        </td>
+        <td colspan="2">
+          <select class="form-select" id="selTeams2">
+            <option value="1">team</option>
+          </select>
+        </td>
+        <td colspan="2">
+          <select class="form-select" id="selTeams3">
+            <option value="1">team</option>
+          </select>
+        </td>
+        <td colspan="2">
+          <select class="form-select" id="selTeams4">
+            <option value="1">team</option>
+          </select>
+        </td>
+        <td colspan="2">
+          <select class="form-select" id="selTeams5">
+            <option value="1">team</option>
+          </select>
+        </td>
+        <td colspan="2">
+          <select class="form-select" id="selTeams6">
+            <option value="1">team</option>
+          </select>
+        </td>
+        <td colspan="2">
+          <select class="form-select" id="selTeams7">
+            <option value="1">team</option>
+          </select>
+        </td>
+      </tr>
+      <td colspan="2">
+        <select class="form-select" id="selMaps1" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selMaps2" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selMaps3" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selMaps4" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selMaps5" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selMaps6" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selMaps7" name="selMaps" placeholder="map">
+          <option value="1">map</option>
+        </select>
+      </td>
+      <tr>
+      </tr>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan1">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan2">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan3">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan4">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan5">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan6">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <td colspan="2">
+        <select class="form-select" id="selPicBan7">
+          <option value="Pick">Pick</option>
+          <option value="Ban">Ban</option>
+        </select>
+      </td>
+      <tr>
+        <td colspan="2" id="teamName1"></td>
+        <td colspan="2" id="teamName2"></td>
+        <td colspan="2" id="teamName3"></td>
+        <td colspan="2" id="teamName4"></td>
+        <td colspan="2" id="teamName5"></td>
+        <td colspan="2" id="teamName6"></td>
+        <td colspan="2" id="teamName7"></td>
+      </tr>
+      <tr>
+        <td colspan="2" id="pickBan1"></td>
+        <td colspan="2" id="pickBan2"></td>
+        <td colspan="2" id="pickBan3"></td>
+        <td colspan="2" id="pickBan4"></td>
+        <td colspan="2" id="pickBan5"></td>
+        <td colspan="2" id="pickBan6"></td>
+        <td colspan="2" id="pickBan7"></td>
+      </tr>
+      <tr>
+        <td colspan="2" id="map1"></td>
+        <td colspan="2" id="map2"></td>
+        <td colspan="2" id="map3"></td>
+        <td colspan="2" id="map4"></td>
+        <td colspan="2" id="map5"></td>
+        <td colspan="2" id="map6"></td>
+        <td colspan="2" id="map7"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+<script src="main.js"></script>
+
+</html>
